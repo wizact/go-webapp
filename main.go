@@ -13,6 +13,8 @@ import (
 
 	"github.com/a-h/templ"
 	"github.com/labstack/echo/v4"
+
+	//	"github.com/labstack/echo/v4/middleware"
 	"github.com/wizact/go-webapp/views/pages/home"
 )
 
@@ -24,8 +26,8 @@ func main() {
 		return Render(c, http.StatusOK, component)
 	})
 
-	// serve assets from filesystem
-	e.Static("/assets", "assets")
+	group := e.Group("assets")
+	group.Use(publicMiddleware())
 
 	killSig := make(chan os.Signal, 1)
 	signal.Notify(killSig, os.Interrupt, syscall.SIGTERM)

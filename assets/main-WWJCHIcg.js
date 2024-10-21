@@ -8,7 +8,7 @@ import{setupCounter as c}from"./counter-B7tPNWz6.js";const t="data:image/svg+xml
       <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+      Click on the Vite and Typescript logos to learn more!!!
     </p>
   </div>
 `;c(document.querySelector("#counter"));

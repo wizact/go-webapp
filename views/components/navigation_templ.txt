@@ -1,1 +1,0 @@
-<section><div><nav><a href=\"/\">Home</a> <a href=\"/Lists\">Todo List</a> <a href=\"/Settings\">Settings</a> <a href=\"/About\">About</a></nav></div></section>

@@ -3,21 +3,28 @@ package layouts
 import "github.com/wizact/go-webapp/views/components"
 
 templ Base() {
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8"/>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>TODO List</title>
-            <link rel="icon" type="image/x-icon" href="/public/favicon.ico"/>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>TODO List</title>
+			<link rel="icon" type="image/x-icon" href="/public/favicon.ico"/>
 			<link rel="stylesheet" type="text/css" href="/assets/styles/global.css"/>
-            <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-            <script type="module" src="/assets/module-loader.js"></script>
-        </head>
-        <body>
-            @components.Navigation()
-            { children... }
-        </body>
-    </html>
+			<script src="https://unpkg.com/htmx.org@1.9.12"></script>
+			<script type="module" src="/assets/module-loader.js"></script>
+		</head>
+		<body>
+			@components.Navigation()
+			{ children... }
+			<div class="flex">
+				test 123456!!
+			</div>
+			<h1 class="text-3xl font-bold underline">
+				Hello world!
+			</h1>
+			<section class="w-full px-8 text-gray-700 bg-white"></section>
+		</body>
+	</html>
 }

@@ -4,7 +4,7 @@
     "name": "preload-helper"
   },
   "views/scripts/index.ts": {
-    "file": "index-Ccrpk6xS.js",
+    "file": "index-DgAD2DUq.js",
     "name": "index",
     "src": "views/scripts/index.ts",
     "isEntry": true,
@@ -32,7 +32,7 @@
     "isDynamicEntry": true
   },
   "views/scripts/modules/main.ts": {
-    "file": "main-Bik6X1xE.js",
+    "file": "main-WWJCHIcg.js",
     "name": "main",
     "src": "views/scripts/modules/main.ts",
     "isDynamicEntry": true,
@@ -40,7 +40,7 @@
       "views/scripts/modules/counter.ts"
     ],
     "css": [
-      "main-Cz4zGhbH.css"
+      "main-DgfaKzuZ.css"
     ]
   }
 }
