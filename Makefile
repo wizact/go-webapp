@@ -6,25 +6,6 @@ ENV := $(if $(ENV),$(ENV),$(shell echo 'development'))
 ec:
 	@echo $(ENV)
 
-#air: css-$(ENV) 
-#	@echo "Starting air, templ, and css..."
-#	npx tailwindcss -i views/css/global.css -o public/styles/global.css & \
-	npx vite build --watch & \
-	templ generate --watch --proxy=http://localhost:1323 & \
-	air 
-
-#css-development: vite 
-#	npx tailwindcss -i views/css/global.css -o public/styles/global.css 
-
-#css-production: vite
-#	npx tailwindcss -i views/css/global.css -o public/styles/global.css --minify
-
-#temple: 
-#	templ generate --watch --proxy=http://localhost:1323 & \
-
-# vite: clean
-#	npx vite build
-
 # The clean target removes the tmp directory used by air
 live/clean:
 	@rm -rf ./tmp
