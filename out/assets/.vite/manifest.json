@@ -1,0 +1,46 @@
+{
+  "_preload-helper-Bnzxvdnn.js": {
+    "file": "preload-helper-Bnzxvdnn.js",
+    "name": "preload-helper"
+  },
+  "views/scripts/index.ts": {
+    "file": "index-DgAD2DUq.js",
+    "name": "index",
+    "src": "views/scripts/index.ts",
+    "isEntry": true,
+    "imports": [
+      "_preload-helper-Bnzxvdnn.js"
+    ],
+    "dynamicImports": [
+      "views/scripts/modules/counter.ts",
+      "views/scripts/modules/main.ts"
+    ]
+  },
+  "views/scripts/module-loader.ts": {
+    "file": "module-loader.js",
+    "name": "moduleLoader",
+    "src": "views/scripts/module-loader.ts",
+    "isEntry": true,
+    "imports": [
+      "_preload-helper-Bnzxvdnn.js"
+    ]
+  },
+  "views/scripts/modules/counter.ts": {
+    "file": "counter-B7tPNWz6.js",
+    "name": "counter",
+    "src": "views/scripts/modules/counter.ts",
+    "isDynamicEntry": true
+  },
+  "views/scripts/modules/main.ts": {
+    "file": "main-WWJCHIcg.js",
+    "name": "main",
+    "src": "views/scripts/modules/main.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "views/scripts/modules/counter.ts"
+    ],
+    "css": [
+      "main-DgfaKzuZ.css"
+    ]
+  }
+}
