@@ -15,6 +15,9 @@ import (
 	"github.com/labstack/echo/v4"
 
 	"github.com/wizact/go-webapp/views/pages/home"
+
+	"github.com/wizact/go-webapp/views/pages/about"
+	"github.com/wizact/go-webapp/views/pages/product"
 )
 
 func main() {
@@ -22,6 +25,14 @@ func main() {
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
 		component := home.Index("John!!")
+		return Render(c, http.StatusOK, component)
+	})
+	e.GET("/about", func(c echo.Context) error {
+		component := about.About("John!!")
+		return Render(c, http.StatusOK, component)
+	})
+	e.GET("/products", func(c echo.Context) error {
+		component := product.List("John!!")
 		return Render(c, http.StatusOK, component)
 	})
 

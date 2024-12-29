@@ -4,7 +4,7 @@
     "name": "preload-helper"
   },
   "views/scripts/index.ts": {
-    "file": "index-DYJxSY52.js",
+    "file": "index-ydDvXx-c.js",
     "name": "index",
     "src": "views/scripts/index.ts",
     "isEntry": true,
@@ -13,7 +13,8 @@
     ],
     "dynamicImports": [
       "views/scripts/modules/counter.ts",
-      "views/scripts/modules/main.ts"
+      "views/scripts/modules/main.ts",
+      "views/scripts/modules/navigation.ts"
     ]
   },
   "views/scripts/module-loader.ts": {
@@ -32,7 +33,7 @@
     "isDynamicEntry": true
   },
   "views/scripts/modules/main.ts": {
-    "file": "main-B6NAxloP.js",
+    "file": "main-CKacTjFM.js",
     "name": "main",
     "src": "views/scripts/modules/main.ts",
     "isDynamicEntry": true,
@@ -42,5 +43,11 @@
     "css": [
       "main-DgfaKzuZ.css"
     ]
+  },
+  "views/scripts/modules/navigation.ts": {
+    "file": "navigation-DOOCehz3.js",
+    "name": "navigation",
+    "src": "views/scripts/modules/navigation.ts",
+    "isDynamicEntry": true
   }
 }

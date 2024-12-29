@@ -1,0 +1,23 @@
+package product 
+
+import "github.com/wizact/go-webapp/views/layouts"
+
+templ List(name string) {
+	@layouts.Base(name) {
+		<div class="container mx-auto p-4">
+			<section class="mb-6">
+				<h2 class="text-xl font-bold mb-2">Features</h2>
+				<div class="grid gap-4 sm:grid-cols-2">
+					<div class="bg-white p-4 shadow-md rounded-lg">
+						<h3 class="font-semibold text-lg">Feature 1</h3>
+						<p class="text-gray-600">Description of feature 1.</p>
+					</div>
+					<div class="bg-white p-4 shadow-md rounded-lg">
+						<h3 class="font-semibold text-lg">Feature 2</h3>
+						<p class="text-gray-600">Description of feature 2.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	}
+}

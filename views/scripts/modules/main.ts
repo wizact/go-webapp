@@ -14,8 +14,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-document.getElementById('menu-button')?.addEventListener('click', () => {
-    document.getElementById('menu')?.classList.toggle('hidden')
-});
-
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)

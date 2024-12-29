@@ -23,7 +23,7 @@ func Navigation() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav><button id=\"menu-button\" class=\"sm:hidden text-white focus:outline-none\">☰</button><ul id=\"menu\" class=\"hidden sm:flex \"><li class=\"mr-2\"><a href=\"#\" class=\"hover:text-blue-200\">Home</a></li><li class=\"mr-2\"><a href=\"#\" class=\"hover:text-blue-200\">About</a></li><li class=\"mr-2\"><a href=\"#\" class=\"hover:text-blue-200\">Contact</a></li></ul></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav><button id=\"menu-button\" class=\"sm:hidden text-white focus:outline-none\">☰</button><ul id=\"menu\" class=\"hidden sm:flex \"><li class=\"mr-2\"><a href=\"/\" class=\"text-white hover:text-blue-200\">Home</a></li><li class=\"mr-2\"><a href=\"/about\" class=\"text-white hover:text-blue-200\">About</a></li><li class=\"mr-2\"><a href=\"/products\" class=\"text-white hover:text-blue-200\">Products</a></li></ul></nav><div id=\"output\" data-module=\"navigation\"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

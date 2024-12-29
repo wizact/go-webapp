@@ -33,7 +33,7 @@ func Base(name string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"flex-grow pt-32 pb-16\"><div class=\"container mx-auto p-4\"><section class=\"mb-6\"><h2 class=\"text-xl font-bold mb-2\">Features</h2><div class=\"grid gap-4 sm:grid-cols-2\"><div class=\"bg-white p-4 shadow-md rounded-lg\"><h3 class=\"font-semibold text-lg\">Feature 1</h3><p class=\"text-gray-600\">Description of feature 1.</p></div><div class=\"bg-white p-4 shadow-md rounded-lg\"><h3 class=\"font-semibold text-lg\">Feature 2</h3><p class=\"text-gray-600\">Description of feature 2.</p></div></div></section><section class=\"mb-6\"><!-- a single div grid using tailwind css with content justify-center --><div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"flex-grow pt-32 pb-16\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -41,7 +41,7 @@ func Base(name string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></section></div></main>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</main>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
