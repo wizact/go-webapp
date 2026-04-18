@@ -25,8 +25,8 @@ This is a Go web application that uses the **Echo** web framework, **Templ** for
 │   ├── pages/             # Page-level Templ templates (one subdir per page)
 │   ├── css/               # Source CSS (Tailwind entry point)
 │   └── scripts/           # TypeScript source and module system
-│       ├── index.ts       # Dev entry: auto-loads modules via data-module attributes
-│       ├── module-loader.ts # Prod entry: manifest-based module loader
+│       ├── index.ts       # Module auto-loader using Vite glob imports (used in both dev and prod)
+│       ├── module-loader.ts # Bootstrapper: loads index.ts and data-module scripts via Vite manifest
 │       └── modules/       # Individual TS modules loaded on demand
 ├── assets/                # Vite build output (JS, CSS, manifest)
 ├── public/                # Public static files (favicon, etc.)
@@ -76,15 +76,15 @@ The `Render` helper bridges Echo and Templ by rendering a `templ.Component` into
 - **Vite**: Bundles TypeScript from `views/scripts/` → output goes to `assets/`. Two entry points are configured: `index.ts` and `module-loader.ts`.
 - **PostCSS**: Configured with `postcss-import`, `postcss-nesting`, `tailwindcss`, and `autoprefixer`.
 
-Assets are served under the `/assets` route group, which uses the build-tag middleware described above.
+Assets are served via an Echo route group created with `e.Group("assets")` in `main.go`. The group has no explicit routes — it only attaches `publicMiddleware()`, which uses Echo's static middleware to serve files from the `assets/` directory (filesystem in dev, `embed.FS` in prod).
 
 ### 5. Dynamic Module Loading (data-module)
 
 The frontend uses a convention-based module loading system:
 
 - HTML elements with a `data-module="<name>"` attribute trigger automatic loading of the corresponding TypeScript module from `views/scripts/modules/<name>.ts`.
-- **Dev mode** (`index.ts`): Uses Vite's `import.meta.glob` for dynamic imports.
-- **Prod mode** (`module-loader.ts`): Reads the Vite manifest (`assets/.vite/manifest.json`) to resolve and load module files.
+- **`index.ts`**: Contains the module auto-loader using Vite's `import.meta.glob` for dynamic imports. Works in both dev and prod (after bundling).
+- **`module-loader.ts`**: The entry point loaded by the HTML (`<script type="module">`). Reads the Vite manifest (`assets/.vite/manifest.json`) to bootstrap `index.ts` and resolve `data-module` scripts at runtime.
 
 When adding new client-side behavior to a component, create a new `.ts` file in `views/scripts/modules/` and add `data-module="<name>"` to the relevant HTML element in the Templ template.
 
